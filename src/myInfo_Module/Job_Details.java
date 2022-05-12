@@ -1,0 +1,32 @@
+package myInfo_Module;
+
+import java.io.File;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+
+public class Job_Details extends Personal_Details {
+
+	public void FileDownload() {
+		d.manage().timeouts().implicitlyWait(8000, TimeUnit.SECONDS);
+		// Positive Testing
+		d.findElement(By.xpath("//*[@id=\"top-menu\"]/li[2]/a")).click();
+		d.manage().timeouts().implicitlyWait(8000, TimeUnit.SECONDS);
+
+		d.findElement(By.id("createDocumentButton")).click();
+
+		d.findElement(By.xpath("//*[@id=\"DocumentExport\"]/tbody/tr[1]/td[2]/ng-include/div/button")).click();
+
+		File filelocation = new File("C:\\Users\\Admin\\Desktop");
+
+		System.out.println("File is Downloaded");
+
+		d.findElement(By.xpath("//*[@id=\"documentDownloadModal\"]/div/div[3]/button")).click();
+
+		/*
+		 * // Negative Testing d.findElement(By.id("36")).sendKeys("KIC INSURANCE");//
+		 * user is not able to enter values
+		 */
+
+	}
+}

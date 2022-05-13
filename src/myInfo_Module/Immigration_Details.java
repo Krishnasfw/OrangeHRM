@@ -28,8 +28,8 @@ public class Immigration_Details extends Depandent_Details {
 		d.findElement(By.id("reviewDate")).sendKeys(" ");
 		d.findElement(By.id("status")).sendKeys("This is Eligible PassPort");
 		d.findElement(By.id("notes")).sendKeys("Enjoy Journey");
-		//d.findElement(By.id("modal-save-button")).click();// save button
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel Button
+		d.findElement(By.id("modal-save-button")).click();// save button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel Button
 		// Attachments
 		d.findElement(By.xpath("//a[text()='Add']")).click();
 		// Positive Testing
@@ -37,8 +37,8 @@ public class Immigration_Details extends Depandent_Details {
 		d.findElement(By.id("filename")).sendKeys("C:\\Users\\Admin\\Desktop\\Testing Data\\Immigration Details.docx");
 
 		d.findElement(By.id("description")).sendKeys("Immigration details attachment");
-		//d.findElement(By.id("modal-save-button")).click();
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel Button
+		d.findElement(By.id("modal-save-button")).click();
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel Button
 			
 		/*
 		 * // Negative Testing d.findElement(By.xpath("//a[text()='Add']")).click(); //

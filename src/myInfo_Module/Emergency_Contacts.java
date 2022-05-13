@@ -23,7 +23,7 @@ public class Emergency_Contacts extends Social_Media {
 		d.findElement(By.id("mobile_phone")).sendKeys("");
 		d.findElement(By.id("office_phone")).sendKeys("");
 		d.findElement(By.id("modal-save-button")).click();
-		d.findElement(By.xpath("//button[text()='Cancel']")).click();
+		//d.findElement(By.xpath("//button[text()='Cancel']")).click();
 
 		Thread.sleep(3000);
 
@@ -34,8 +34,8 @@ public class Emergency_Contacts extends Social_Media {
 		d.findElement(By.id("filename")).sendKeys("C:\\Users\\Admin\\Desktop\\Testing Data\\Emergency Contact Details.docx");
 
 		d.findElement(By.id("description")).sendKeys("Emergengy Contact Details attachment");
-		//d.findElement(By.id("modal-save-button")).click();
-		d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel
+		d.findElement(By.id("modal-save-button")).click();
+		//d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel
 				 
 		/*
 		 * // Negative Testing d.findElement(By.xpath("//a[text()='Add']")).click(); //

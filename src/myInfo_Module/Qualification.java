@@ -34,8 +34,9 @@ public class Qualification extends Report_to {
 		d.findElement(By.id("from_date")).sendKeys("Tue, 08 Aug 2006");
 		d.findElement(By.id("to_date")).sendKeys("Mon, 14 Jun 2021");
 		d.findElement(By.id("comments")).sendKeys("Good");
-		//d.findElement(By.id("modal-save-button")).click();// save button
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel
+		d.findElement(By.id("modal-save-button")).click();// save button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
+		// Cancel
 		Thread.sleep(2000);
 		// qualify
 		Actions a1 = new Actions(d);
@@ -52,8 +53,9 @@ public class Qualification extends Report_to {
 		d.findElement(By.id("major")).sendKeys("Easily Understanding");
 		d.findElement(By.id("year")).sendKeys("2019");
 		d.findElement(By.id("score")).sendKeys("7.5");
-		//d.findElement(By.id("modal-save-button")).click();// save button
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel button
+		d.findElement(By.id("modal-save-button")).click();// save button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
+		// Cancel button
 
 		// skills()
 		Actions a2 = new Actions(d);
@@ -68,8 +70,8 @@ public class Qualification extends Report_to {
 		skillset.selectByIndex(1);
 		d.findElement(By.id("years_of_exp")).sendKeys("3");
 		d.findElement(By.id("comments")).sendKeys("Good");
-		//d.findElement(By.id("modal-save-button")).click();// save button
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
+		d.findElement(By.id("modal-save-button")).click();// save button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
 		// Cancel
 		Thread.sleep(3000);
 
@@ -96,11 +98,12 @@ public class Qualification extends Report_to {
 
 		d.findElement(By.id("comments")).sendKeys("Language is must");
 
-		//d.findElement(By.id("modal-save-button")).click();// save button
-		d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel
+		d.findElement(By.id("modal-save-button")).click();// save button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
+		// Cancel
 		Thread.sleep(3000);
 
-		// License 
+		// License
 
 		Actions a4 = new Actions(d);
 
@@ -115,19 +118,20 @@ public class Qualification extends Report_to {
 		lice.selectByIndex(2);
 
 		d.findElement(By.id("licenseNo")).sendKeys("TN3800QEEw57554");
-		//d.findElement(By.id("modal-save-button")).click();// save button
-	 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//cancel
+		d.findElement(By.id("modal-save-button")).click();// save button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//cancel
 		Thread.sleep(3000);
 		// Attachments
 		d.findElement(By.xpath("//a[text()='Add']")).click();
 		// Positive Testing
 		// Document is upload as < 5MB and in the format of doc
-		d.findElement(By.id("filename")).sendKeys("C:\\Users\\Admin\\Desktop\\Testing Data\\Qualification Details.docx");
+		d.findElement(By.id("filename"))
+				.sendKeys("C:\\Users\\Admin\\Desktop\\Testing Data\\Qualification Details.docx");
 
 		d.findElement(By.id("description")).sendKeys("Contact details attachment");
-		//d.findElement(By.id("modal-save-button")).click();
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//cancel
-			
+		// d.findElement(By.id("modal-save-button")).click();
+		d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// cancel
+
 		/*
 		 * // Negative Testing d.findElement(By.xpath("//a[text()='Add']")).click(); //
 		 * Document is upload as > 5MB and in the format of pdf
@@ -137,9 +141,9 @@ public class Qualification extends Report_to {
 		 * d.findElement(By.id("description")).
 		 * sendKeys("This is the file for contact details attachment");
 		 * d.findElement(By.id("modal-save-button")).click();// save button
-		 */ 
-		 String qualification = d.getTitle();
-			System.out.println("Sub Module : "+qualification+ "is Displayed");
+		 */
+		String qualification = d.getTitle();
+		System.out.println("Sub Module : " + qualification + "is Displayed");
 
 		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
 		// close button

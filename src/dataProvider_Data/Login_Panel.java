@@ -20,12 +20,12 @@ public class Login_Panel {
 	WebDriver d;
 
 	@DataProvider(name = "logindata")
-	public String[][] loginDataprovider() throws BiffException, IOException {
-		String[][] data = getxl();
+	public Object[][] loginDataprovider() throws BiffException, IOException {
+		Object[][] data = getxl();
 		return data;
 	}
 
-	public String[][] getxl() throws BiffException, IOException {
+	public Object[][] getxl() throws BiffException, IOException {
 		String EXL = "C:\\Users\\Admin\\Documents\\Login TestData.xls";
 		FileInputStream xl = new FileInputStream(EXL);
 		Workbook workbook = Workbook.getWorkbook(xl);
@@ -43,7 +43,11 @@ public class Login_Panel {
 	}
 
 	@Test(dataProvider = "logindata")
-	public void logindata(String U, String P) {
+	public void logindata(String U, String P) throws InterruptedException {
+		d.get("http://keshavaraj7-trials7401.orangehrmlive.com/");
+
+		d.manage().window().maximize();
+		Thread.sleep(3000);
 		d.findElement(By.id("txtUsername")).sendKeys(U);
 		d.findElement(By.id("txtPassword")).sendKeys(P);
 		d.findElement(By.xpath("//button[text()='Login']")).click();
@@ -52,13 +56,10 @@ public class Login_Panel {
 	}
 
 	@BeforeTest
-	public void OpenBrowser() throws InterruptedException {
+	public void OpenBrowser()  {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\Selenium Jar\\chromedriver.exe");
 		d = new ChromeDriver();
-		d.get("http://keshavaraj7-trials7401.orangehrmlive.com/");
-
-		d.manage().window().maximize();
-		Thread.sleep(3000);
+		
 	}
 
 	@AfterTest

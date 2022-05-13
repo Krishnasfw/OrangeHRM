@@ -44,6 +44,7 @@ public class Covid_19 extends Direct_Deposit {
 
 		d.findElement(By.id("description")).sendKeys("Covid-19 Vaccination details attachment");
 		d.findElement(By.id("modal-save-button")).click();
+		d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel button
 
 		/*
 		 * // Negative Testing d.findElement(By.xpath("//a[text()='Add']")).click(); //
@@ -60,8 +61,8 @@ public class Covid_19 extends Direct_Deposit {
 		 * "//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// close
 		 * button
 		 */
-		
+
 		System.out.println("All Sub Modules are Executed");
-		d.close();
+		
 	}
 }

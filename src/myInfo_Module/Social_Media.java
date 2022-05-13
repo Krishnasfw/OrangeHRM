@@ -24,8 +24,8 @@ public class Social_Media extends Contact_Details {
 		d.findElement(By.id("profileName")).sendKeys("Administrator");
 
 		//d.findElement(By.id("allowShare")).click();
-		//d.findElement(By.id("modal-save-button")).click();
-		d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel
+		d.findElement(By.id("modal-save-button")).click();
+		//d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel
 		 
 		/*
 		 * //Negative Testing d.findElement(By.id("typeId")); Select type1 = new Select

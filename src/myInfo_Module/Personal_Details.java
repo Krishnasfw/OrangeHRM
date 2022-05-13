@@ -48,6 +48,19 @@ public class Personal_Details extends Main_Class {
 		js.executeScript("scrollBy(0,100)");
 		Thread.sleep(3000);
 		d.findElement(By.xpath("//button[text()='Save']")).click();
+		
+		Thread.sleep(3000);
+		//attachment
+				// Positive Testing
+				d.findElement(By.xpath("//a[text()='Add']")).click();
+				// Document is upload as < 5MB and in the format of doc
+				d.findElement(By.id("filename")).sendKeys("C:\\Users\\Admin\\Desktop\\Testing Data\\Personal Details.docx");
+
+				d.findElement(By.id("description")).sendKeys("Personal details attachment");
+				Thread.sleep(3000);
+				d.findElement(By.xpath("//button[@class='btn btn-secondary']")).click();
+				
+				//d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();
 
 		
 		String text = d.getTitle();

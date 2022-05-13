@@ -1,6 +1,10 @@
 package myInfo_Module;
 
 public class Launch extends Covid_19 {
+	public void closeBrowser() {
+		d.close();
+		
+	}
 	
 	public static void main(String[] args) throws InterruptedException {
 		Launch launch = new Launch();
@@ -19,6 +23,7 @@ public class Launch extends Covid_19 {
 		launch.member_ship();
 		launch.direct_depo();
 		launch.covid();
+		launch.closeBrowser();
 	}
 
 }

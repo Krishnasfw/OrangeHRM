@@ -31,8 +31,9 @@ public class Member_ship extends Qualification {
 
 		Select currency = new Select(d.findElement(By.id("subscriptionCurrency")));
 		currency.selectByIndex(2);
-		//d.findElement(By.id("modal-save-button")).click();// save button
-		d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// Cancel
+		d.findElement(By.id("modal-save-button")).click();// save button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
+		// Cancel
 
 		// Attachments
 		d.findElement(By.xpath("//a[text()='Add']")).click();
@@ -41,9 +42,8 @@ public class Member_ship extends Qualification {
 		d.findElement(By.id("filename")).sendKeys("C:\\Users\\Admin\\Desktop\\Testing Data\\Membership Details.docx");
 
 		d.findElement(By.id("description")).sendKeys(" MemberShip details attachment");
-		//d.findElement(By.id("modal-save-button")).click();
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//cancel
-
+		d.findElement(By.id("modal-save-button")).click();
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//cancel
 
 		/*
 		 * // Negative Testing d.findElement(By.xpath("//a[text()='Add']")).click(); //
@@ -54,11 +54,12 @@ public class Member_ship extends Qualification {
 		 * d.findElement(By.id("description")).
 		 * sendKeys("This is the file for contact details attachment");
 		 * d.findElement(By.id("modal-save-button")).click();// save button
-		 */		
-		 String member = d.getTitle();
-			System.out.println("Sub Module : "+member+ "is Displayed");
+		 */
+		String member = d.getTitle();
+		System.out.println("Sub Module : " + member + "is Displayed");
 
-		//d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// close button
+		// d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();//
+		// close button
 
 	}
 

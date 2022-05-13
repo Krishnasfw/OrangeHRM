@@ -11,7 +11,7 @@ public class Work_Week extends Immigration_Details {
 
 	public void workweek() throws InterruptedException {
 		
-		d.manage().timeouts().implicitlyWait(10000, TimeUnit.SECONDS);
+		d.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		WebElement menu = d.findElement(By.id("top-menu-trigger"));
 		menu.click();

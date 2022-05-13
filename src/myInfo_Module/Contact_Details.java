@@ -40,9 +40,10 @@ public class Contact_Details extends Salary_Details {
 
 		d.findElement(By.id("description")).sendKeys("Contact details attachment");
 		Thread.sleep(3000);
+		d.findElement(By.id("modal-save-button")).click();
 		//d.findElement(By.xpath("//button[@class='btn btn-secondary']")).click();
 		
-		d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();
+		//d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();
 		
 		/*
 		 * // Negative Testing d.findElement(By.xpath("//a[text()='Add']")).click(); //

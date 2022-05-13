@@ -26,8 +26,8 @@ public class Depandent_Details extends Emergency_Contacts {
 
 		d.findElement(By.id("date_of_birth")).sendKeys("Wed, 24 July 1991");
 		d.findElement(By.id("relationship")).sendKeys("Friend");
-		//d.findElement(By.id("modal-save-button")).click(); // save Button
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// close
+		d.findElement(By.id("modal-save-button")).click(); // save Button
+		 //d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// close
 
 		// Marriage Info
 		d.findElement(By.id("3")).sendKeys("--Nil--");
@@ -41,8 +41,8 @@ public class Depandent_Details extends Emergency_Contacts {
 		d.findElement(By.id("filename")).sendKeys("C:\\Users\\Admin\\Desktop\\Testing Data\\Dependant Details.docx");
 
 		d.findElement(By.id("description")).sendKeys("Depandent details attachment");
-		//d.findElement(By.id("modal-save-button")).click();
-		 d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// close
+		d.findElement(By.id("modal-save-button")).click();
+		 //d.findElement(By.xpath("//*[@id=\"modal-holder\"]/div/div/div/div[3]/button[1]")).click();// close
 
 		/*
 		 * // Negative Testing d.findElement(By.xpath("//a[text()='Add']")).click(); //
